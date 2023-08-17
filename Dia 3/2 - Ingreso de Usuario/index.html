@@ -6,6 +6,11 @@
         <p>Ingresa tu nombre</p>
         <input type="text" id="nombreUsuario">
         <button onclick="saludarUsuario()">Saludar</button>
+        <!-- Necesitamos el id del input para saber de dónde extraerá el nombre 
+             la función.
+            document indica que es un elemento del documento
+            getElementById() obtiene el objeto de la etiqueta html con dicho ID
+            .value indica que quiero obtener el valor del objecto -->
 
         <script>
             function saludarUsuario(){

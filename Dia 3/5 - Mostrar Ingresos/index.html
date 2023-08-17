@@ -4,22 +4,30 @@
     </head>
     <body>
         <p>Ingresa tu nombre</p>
-        <input type="text" id="nombreDeUsuario">
+        <!-- Botón que, al hacer clic, ejecuta la función mostrarNombre -->
         <button onclick="mostrarNombre()">Ingresar</button>
+
+        <!-- Etiqueta donde se mostrará el mensaje con el nombre del usuario -->
         <h1 id="salida">No sé tu nombre</h1>
 
         <script>
+            // Función que se ejecuta cuando el usuario hace clic en el botón "Ingresar"
+            // El propósito principal de la función mostrarNombre es interactuar con el usuario,
+            // permitiéndole ver un mensaje personalizado basado en la entrada que proporcionó.
+
             function mostrarNombre(){
+                // Obtiene el elemento del campo de texto por su ID
                 let elementoNombre = document.getElementById("nombreDeUsuario");
-                let elementoTexto = document.getElementById("salida");
-                let mensaje = "Tu te llamas " + elementoNombre.value
                 
-
-
+                // Obtiene el elemento donde se mostrará el mensaje
+                let elementoTexto = document.getElementById("salida");
+                
+                // Crea el mensaje concatenando una cadena de texto con el valor ingresado por el usuario
+                let mensaje = "Tu te llamas " + elementoNombre.value;
+                
+                // Establece el contenido del elementoTexto con el mensaje creado
                 elementoTexto.textContent = mensaje;
             }
         </script>
-
-
     </body>
 </html>
