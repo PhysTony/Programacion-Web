@@ -4,11 +4,16 @@
     </head>
     <body>
         <p>Ingresa tu nombre</p>
+        <!-- Campo de texto donde el usuario puede ingresar su nombre -->
+        <input type="text" id="nombreDeUsuario">
+
         <!-- Botón que, al hacer clic, ejecuta la función mostrarNombre -->
         <button onclick="mostrarNombre()">Ingresar</button>
 
         <!-- Etiqueta donde se mostrará el mensaje con el nombre del usuario -->
         <h1 id="salida">No sé tu nombre</h1>
+
+        <p id="salida_2"></p>
 
         <script>
             // Función que se ejecuta cuando el usuario hace clic en el botón "Ingresar"
@@ -21,12 +26,15 @@
                 
                 // Obtiene el elemento donde se mostrará el mensaje
                 let elementoTexto = document.getElementById("salida");
+                let elementoParrafo = document.getElementById("salida_2");
                 
                 // Crea el mensaje concatenando una cadena de texto con el valor ingresado por el usuario
                 let mensaje = "Tu te llamas " + elementoNombre.value;
+                let advertencia = "Vas a morir " + elementoNombre.value;
                 
                 // Establece el contenido del elementoTexto con el mensaje creado
                 elementoTexto.textContent = mensaje;
+                elementoParrafo.textContent = advertencia;
             }
         </script>
     </body>
